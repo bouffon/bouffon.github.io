@@ -1,0 +1,86 @@
+<!--
+	Lab 1 SEG 3125
+	Ethan Lee, 300026957
+-->
+
+
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="utf-8">
+
+	<!-- External CSS file -->
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>Survey</title>
+  </head>
+  
+  <body>
+	<h1>SEG 3125: Lab 1 Survey</h1>
+	<form id="myform" action="index.php" >
+	<br>
+	<br>
+
+	<!--Choose a website to evaluate -->
+	<h2>What do you think of the UI on the <a href="https://www.notion.so/Help-Support-e040febf70a94950b8620e6f00005004">Notion help page</a>?</h2>	
+	<br>
+	<br>
+
+	<!--Picture used as the same link to the website -->
+	<img src="images/notion-logo-no-background.png" alt="http://Provigo.ca" width="450" height="300">
+
+	<br>
+	<hr>
+
+	<div class="question">
+	<h2> Please enter the first and last name of the person reviewing the webpage </h2>
+	<p>First name: <input type="text" name="firstname"></p>
+	<p>Last name: <input type="text" name="lastname"></p>
+	<br>
+	<br>
+		
+	</div>
+	<hr>
+
+	<div class="question">
+		<h2> Have you ever used Notion before?</h2>
+		<input type="radio" name="School" value="Online">Online<br>
+		<input type="radio" name="School" value="In-Person">In-Person<br>
+		<input type="radio" name="School" value="Indifferent">Indifferent<br>
+	
+	</div>
+	<hr>
+		
+		
+	<div class="question">
+		<h2> What applications do you think Notion is best used for?</h2>
+		<input type="checkbox" name="Application" value="Note-taking">Note-taking<br><br>
+		<input type="checkbox" name="Application" value="Brainstorming">Brainstorming<br><br>
+		<input type="checkbox" name="Application" value="Planning">Planning<br><br>
+		<input type="checkbox" name="Application" value="Collaboration">Collaboration<br><br>
+				
+		<h2>Is this help page easy to navigate?</h2>
+		<select id="favorite">
+			<option value="Navigation" selected="selected">Select One</option>
+			<option value="Navigation">Yes</option>
+			<option value="Navigation">No</option>
+		</select>
+	</div>
+	<hr>
+
+
+	<div class="question">
+	<h2> How could this help page be improved?</h2>
+	<textarea rows="5" cols="30"></textarea>
+	</div>			
+	<br>
+	<br>
+			
+	<button id="submitButton" type="button" class="block">
+		SUBMIT Your Survey Here
+	</button>
+		
+	<p id="signature">Web page created by Bouffon</p>	
+	
+	</form>
+  </body>
+</html> 
