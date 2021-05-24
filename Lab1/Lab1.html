@@ -1,0 +1,92 @@
+<!--
+	Lab 1 SEG 3125
+	Ethan Lee, 300026957
+-->
+
+
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="utf-8">
+
+	<!-- External CSS file -->
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>Survey</title>
+  </head>
+  
+  <body>
+	<h1>SEG 3125: Lab 1 Survey</h1>
+	<form id="myform" action="index.php" >
+	<br>
+	<br>
+
+	<!--Choose a website to evaluate -->
+	<h2>What do you think of the UI on the <a href="https://www.notion.so/Help-Support-e040febf70a94950b8620e6f00005004">Notion help page</a>?</h2>	
+	<br>
+	<br>
+
+	<!--Picture used as the same link to the website -->
+	<a href="https://www.notion.so/Help-Support-e040febf70a94950b8620e6f00005004" target="_blank">
+		<img src="images/notion-logo-no-background.PNG" alt="http://www.notion.ca/Help-Support" 
+		width="300" height="300">
+	</a>
+
+	<br>
+	<hr>
+
+	<div class="question">
+	<h2> Please enter your first and last name </h2>
+	<p>First name: <input type="text" name="firstname"></p>
+	<p>Last name: <input type="text" name="lastname"></p>
+	<br>
+	<br>
+		
+	</div>
+	<hr>
+
+	<div class="question">
+		<h2> Do you enjoy online or in-person school?</h2>
+		<input type="radio" name="School" value="Online">Online<br>
+		<input type="radio" name="School" value="In-Person">In-Person<br>
+		<input type="radio" name="School" value="Indifferent">Indifferent<br>
+	
+	</div>
+	<hr>
+		
+		
+	<div class="question">
+		<h2> What is your favourite colour?</h2>
+		<input type="checkbox" name="" value="Red">Red<br>
+		<input type="checkbox" name="Color" value="Green">Green<br>
+		<input type="checkbox" name="Color" value="Blue">Blue<br>
+		<input type="checkbox" name="Color" value="Yellow">Yellow<br>
+		
+		<br>
+		
+		<h2>What is your favorite sport?</h2>
+		<select id="favorite">
+			<option value="Soccer" selected="selected">Soccer</option>
+			<option value="Basketball">Basketball</option>
+			<option value="Hockey">Hockey</option>
+			<option value="None" selected="selected">None, I'm Lazy</option>
+		</select>
+	</div>
+	<hr>
+
+
+	<div class="question">
+	<h2> How Could This Survey Be Improved?</h2>
+	<textarea rows="5" cols="30"></textarea>
+	</div>			
+	<br>
+	<br>
+			
+	<button id="submitButton" type="button" class="block">
+		SUBMIT Your Survey Here
+	</button>
+		
+	<p id="signature">Web page created by Bouffon</p>	
+	
+	</form>
+  </body>
+</html> 
