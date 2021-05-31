@@ -67,7 +67,7 @@ function populateListProductChoices(slct1, slct2) {
 
 function selectedItems(){
 	
-	alert("Cart Updated!");
+	alert("Cart Updated!\nClick on the Cart button to review your order.");
 	var ele = document.getElementsByName("product");
 	var chosenProducts = [];
 	
