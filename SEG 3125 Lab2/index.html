@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> -->
+  <meta charset="utf-8">
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+  <title>Basic Online Grocery Store</title>
+</head>
+
+<body>
+
+<h1>Welcome to the Basic Online Grocery Store!</h1>
+
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'PersonalData')">Personal Data</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+</div>
+
+<!-- Tab content -->
+<div id="PersonalData" class="tabcontent">
+  <!--
+  <p> Would you like organic choices?</h2>
+  <input type="checkbox" name="Organic" value="Organic">Organic Products<br><br>
+  -->
+	
+  <p>Please Choose from one of the Dietary Restriction Categories:</p>
+
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	  <option value="SelectOne">Please Select One</option>
+    <option value="None">None</option>
+    <option value="Organic">Organic</option>
+	  <option value="Lactose-Intolerant">Lactose-Intolerant</option>
+    <option value="Nut Allergy">Nut Allergy</option>
+	</select>
+</div>
+
+<div id="Products" class="tabcontent">
+  <p>The following products have been preselected products based on your restrictions.</p>
+	 Check off the items that you would like to buy:
+   <br>
+   <br>
+
+	 <div id="displayProduct"></div>
+
+   <br>
+	<button id="addCart" type="button" class="block" onclick="selectedItems()">
+	  Add items to cart
+	</button>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <p>Here is your cart</p>
+  <div id="displayCart"></div>
+</div>
+
+<p id="signature">Web page created by Bouffon</p>	
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+
+</body>
+</html>
