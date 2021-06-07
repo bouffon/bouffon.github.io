@@ -1,0 +1,129 @@
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+body {
+  background-color: lightslategray;
+  border: 2px solid black;
+  padding: 0px 20px 20px 20px;
+  align-items:center;
+  font-family: Georgia;
+}
+
+  hr {
+    display: block;
+    width: 100%;
+    border-width: normal;
+    height: 2px;
+    background-color: black;
+    color: black
+  }
+
+  h1 {
+    font-size: 60px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    color:  black;
+  }
+
+  h2{
+    font-size: 40px;
+    color: honeydew;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 30px;
+    color: honeydew;
+    font-weight: normal;
+    text-indent: 30px
+  }
+
+  p{
+    font-size: 30px;
+    color:black;
+    font-weight: bold;
+  }
+
+  #main{
+    font-size: 30px;
+  }
+
+  #dietSelect{
+    font-size: 20px;
+  }
+
+  #addCart {
+    font-size: 20px;
+    font-weight: normal;
+    padding: 2px 2px;
+    max-height: fit-content;
+    cursor: pointer;
+    height: auto;
+    border: none;
+  }
+
+  #displayCart{
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    color: honeydew;
+    position: absolute;
+  }
+
+  #mySidenav{
+    font-size: 40px;
+    position: left = 10;
+  }
+
+      /* Defining styling for a specific element with an id */
+    #signature {
+      color: black;
+      font-style: italic;
+      font-size: 75%;
+      position: fixed; bottom: 0; right: 10; width: 100%; text-align: center;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 50px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenac {padding-left: 15px;}
+      .sidenav a {font-size: 18px;}
+    }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> -->
+  <meta charset="utf-8">
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+  <title>Basic Online Grocery Store</title>
+</head>
+
+<body>
+
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div id="main">
+
+  <h1>Welcome to the Basic Online Grocery Store!</h1>
+
+  <hr>
+	
+  <p>Please select one of the Dietary Restriction Categories:</p>
+
+	<!--<input id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')"> -->
+    <input type="checkbox" class="check" id="None" name="dietSelect" value="None" onclick="populateListProductChoices(this.id,'displayProduct',this.name)">None
+    <input type="checkbox" class="check" id="Organic" name="dietSelect" value="Organic" onclick="populateListProductChoices(this.id,'displayProduct',this.name)">Organic
+	  <input type="checkbox" class="check" id="Lactose-Intolerant" name="dietSelect" value="Lactose-Intolerant" onclick="populateListProductChoices(this.id,'displayProduct',this.name)">Lactose-Intolerant
+    <input type="checkbox" class="check" id="Nut Allergy" name="dietSelect" value="Nut Allergy" onclick="populateListProductChoices(this.id,'displayProduct',this.name)"> Nut Allergy
+  
+  <br>
+  <br>
+  <hr>
+
+  <p>The following products have been preselected based on your restrictions.</p>
+	 Select the items that you would like to buy:
+   <br>
+   <br>
+
+	 <div id="displayProduct"></div>
+   <br>
+
+	<button id="addCart" type="button" class="block" onclick="selectedItems()">
+	  Add To Cart
+	</button>
+
+<p id="signature">Web page created by Bouffon</p>	
+<br>
+<br>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Open Cart</span>
+
+</div>
+
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+
+<!--Side Nav code adapted from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_push-->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div id="displayCart">
+    <h2>Empty Cart</h2>
+  </div>
+</div>
+
+
+</body>
+</html>
