@@ -1,0 +1,23 @@
+body{
+    padding-bottom: 100px;
+}
+
+td{
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+}
+
+.navbar{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+.btn{
+    margin: 0 auto;
+    display: block;
+}
+
