@@ -150,3 +150,7 @@ function validate(evt) {
     }
 }
 
+function booked(name){
+    alert("Successfully booked an appointment for " + name + "!");
+}
+
