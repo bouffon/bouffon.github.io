@@ -1,0 +1,472 @@
+<!-- This file contains a few elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+<!-- as well as JQuery found here: https://www.w3schools.com/jquery/default.asp -->
+
+<!-- Images source: -->
+<!-- The two icons come from this bank of icons: https://icons8.com/icons.  I used the free downloadable ones.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Module 5 - Lab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Your own script -->
+    <script src="scripts/service.js"></script>
+    <!-- here we input our javascript helper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<!-- Using the collapsible Navbar, so we see the hamburger menu icon -->
+<!-- It really has become a standard. -->
+<!-- As your page is a vertical page (Module 4 requirement), you mus use the navbar -->
+<!-- to just jump to parts of the page. What I put as First/Second/Third here would -->
+<!-- be sections in your page. -->
+<nav class="navbar navbar-expand-md bg-light text-dark p-3 sticky-top">
+    <h1 class="navbar-brand" href="#name">Littlest Pet Aches</h1>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link p-3" href="#about"> <img src="https://img.icons8.com/ios/50/000000/info--v1.pngAbout" alt="logo" style="width:30px;padding:5px">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-3" href="#services"><img src="https://img.icons8.com/ios/50/000000/helping-hand.png" alt="logo" style="width:30px;padding:5px">Servies</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-3" href="#experts"><img src="https://img.icons8.com/ios-glyphs/60/000000/stethoscope.png" alt="logo" style="width:30px;padding:5px">Experts</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br>
+
+<div class="container p-3 my-3" id="about">
+    <h3> <img src="https://img.icons8.com/ios/50/000000/info--v1.png" alt="about" style="padding:10px">About Us</h3>
+    <p style="font-size: 25px; padding-left: 1.5rem">We are a small clinic located in <strong>Downtown Ottawa.</strong></p>
+    <p style="font-size: 25px; padding-left: 1.5rem">Address: 75 Laurier Avenue East, Ottawa, ON K1N 6N5</p>
+</div>
+
+<!-- Just arbitrary divisions to see the link from the NavBar -->
+<!-- Also, notice the use of the icon repeated from the menu to add grouping -->
+<div class="container p-3 my-3" id="services">
+    <h3><img src="https://img.icons8.com/ios/50/000000/helping-hand.png" alt="logo" style="padding:10px">What We Do</h3>
+    <!--
+    Tables are one of many ways to organize information easily.
+    It is a good way to list of prices, or services in a business website
+    https://getbootstrap.com/docs/5.0/content/tables/
+    -->
+    <table class="table table-info table-hover bg-success">
+        <thead>
+            <tr>
+                <th scope="col"><h2>Services</h2></th>
+                <th scope="col"><h2>Pricing</h2></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Neuters</td>
+                <td>$100 per session</td>
+            </tr>
+            <tr>
+                <td>Grooming</td>
+                <td>$80</td>
+            </tr>
+            <tr>
+                <td>Training</td>
+                <td>$150 per session</td>
+            </tr>
+            <tr>
+                <td>Microchip</td>
+                <td>$200 per procedure </td>
+            </tr>
+            <tr>
+                <td>Pet Vaccination</td>
+                <td>$80 per session</td>
+            </tr>
+            <tr>
+                <td>Pet Dentistry</td>
+                <td>Routine cleaning: $200, Tooth extraction: $250</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container" id="experts">
+    <h1><img src="https://img.icons8.com/ios-glyphs/60/000000/stethoscope.png" alt="logo" style="padding:10px">Meet the Experts!</h1>
+
+    <div class="row justify-content-around">
+
+        <div class="card" style="width: 18rem;">
+            <img src="images/physio1.jpg" class="card-img-top" alt="..." height="400">
+            <div class="card-body text-center">
+                <p class="card-text">Mary is the owner. She has 10 years of experience as a veterinarian around the world and started the her practice in 2005.</p>
+                <button class="btn btn-primary alert-danger" id="Mary" type="button" data-bs-toggle="modal" data-bs-target="#bookMary" onclick="setUnavailableDates(this.id)">Book Appointment</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="bookMary" tabindex="-1" aria-labelledby="bookMary" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-x1">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalLabel">Book an appointment with Mary</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>We are open 7 days a week, Mary does not work on Mondays. <input type="text" id="dateInput1"></h4>
+
+                            <h4>Choose a service</h4>
+                            <input type="radio" name="Service" value="Online"> Neuter<br>
+                            <input type="radio" name="Service" value="In-Person"> Grooming<br>
+                            <input type="radio" name="Service" value="Indifferent"> Training <br>
+                            <input type="radio" name="Service" value="Indifferent"> Microchip <br>
+                            <input type="radio" name="Service" value="Vaccination"> Pet Vaccination<br>
+                            <input type="radio" name="Service" value="Dentistry"> Pet Dentistry<br>
+
+                            <hr>
+
+                            <div class="row">
+                            <div class="col-75">
+                                <div class="container">
+                                <form action="/action_page.php">
+                                
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <h4>Customer Information</h4>
+                                            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                            <input type="text" id="email" name="email" placeholder="john@example.com">
+                                            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                            <label for="city"><i class="fa fa-institution"></i> City</label>
+                                            <input type="text" id="city" name="city" placeholder="New York">
+
+                                            <div class="row">
+                                            <div class="col-50">
+                                                <label for="phone">Phone Number</label>
+                                                <input type="text" id="phone" name="phone" placeholder="(XXX) XXX-XXXX">
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-50">
+                                        <h3>Payment</h3>
+                                        <label for="fname">Accepted Cards</label>
+                                        <div class="icon-container">
+                                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                        </div>
+                                        <label for="cname">Name on Card</label>
+                                        <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                        <label for="ccnum">Credit card number</label>
+                                        <input type="text" id="ccnum" name="cardnumber" maxlength="16" placeholder="XXXXXXXXXXXXXXXX" onkeypress="validate(event)"
+                                        title="Please enter a 16-digit credit card number." pattern=".{16,16}">
+
+                                        <label for="expmonth">Exp Month</label>
+                                        <select id="favorite" placeholder="Select a month">
+                                            <option value="Navigation" selected="selected">Select a Month</option>
+                                            <option value="Navigation">Janary</option>
+                                            <option value="Navigation">February</option>
+                                            <option value="Navigation">March</option>
+                                            <option value="Navigation">April</option>
+                                            <option value="Navigation">May</option>
+                                            <option value="Navigation">June</option>
+                                            <option value="Navigation">July</option>
+                                            <option value="Navigation">August</option>
+                                            <option value="Navigation">September</option>
+                                            <option value="Navigation">October</option>
+                                            <option value="Navigation">November</option>
+                                            <option value="Navigation">December</option>
+                                        </select>    
+                                        <br>    
+                                        <br>                                
+                                        <div class="row">
+                                        <div class="col-50">
+                                            <label for="expyear">Exp Year</label>
+                                            <input type="text" id="expyear" name="expyear" placeholder="2021" maxlength="4" onkeypress="validate(event)">
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="cvv">CVV</label>
+                                            <input type="text" id="cvv" name="cvv" maxlength="3" placeholder="123" onkeypress="validate(event)">
+                                        </div>
+
+                                    </div>
+                                    </div>
+                                    
+                                </div>
+                                    <label>
+                                    <input type="checkbox" value="0" name="surcharge"> I understand that if the appointment is missed, a $20 fee will be charged.
+                                    </label>
+                                </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="booked(Mary)">Book
+                                    </button>
+                                    </div>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="images/physio2.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <p class="card-text">Jessica is a license veterinarian who specializes in cats and dogs, with 6 years of experience.</p>
+                <button class="btn btn-primary alert-danger" id="Jessica" type="button" data-bs-toggle="modal" data-bs-target="#bookJessica" onclick="setUnavailableDates(this.id)">Book Appointment</button>
+
+                <!--Modal-->
+                <div class="modal fade" id="bookJessica" tabindex="-1" aria-labelledby="bookJessica" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-x1">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalLabel">Book an appointment with Jessica</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>We are open 7 days a week, Jessica does not work on Tuesdays. <input type="text" id="dateInput2"></h4>
+
+                            <h4>Choose a service</h4>
+                            <input type="radio" name="Service" value="Online"> Neuter<br>
+                            <input type="radio" name="Service" value="In-Person"> Grooming<br>
+                            <input type="radio" name="Service" value="Indifferent"> Training <br>
+                            <input type="radio" name="Service" value="Indifferent"> Microchip <br>
+                            <input type="radio" name="Service" value="Vaccination"> Pet Vaccination<br>
+                            <input type="radio" name="Service" value="Dentistry"> Pet Dentistry<br>
+
+                            <hr>
+                            <div class="row">
+                            <div class="col-75">
+                                <div class="container">
+                                <form action="/action_page.php">
+                                
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <h4>Customer Information</h4>
+                                            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                            <input type="text" id="email" name="email" placeholder="john@example.com">
+                                            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                            <label for="city"><i class="fa fa-institution"></i> City</label>
+                                            <input type="text" id="city" name="city" placeholder="New York">
+
+                                            <div class="row">
+                                            <div class="col-50">
+                                                <label for="phone">Phone Number</label>
+                                                <input type="text" id="phone" name="phone" placeholder="(XXX) XXX-XXXX">
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-50">
+                                        <h3>Payment</h3>
+                                        <label for="fname">Accepted Cards</label>
+                                        <div class="icon-container">
+                                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                        </div>
+                                        <label for="cname">Name on Card</label>
+                                        <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                        <label for="ccnum">Credit card number</label>
+                                        <input type="text" id="ccnum" name="cardnumber" maxlength="16" placeholder="XXXXXXXXXXXXXXXX" onkeypress="validate(event)"
+                                        title="Please enter a 16-digit credit card number." pattern=".{16,16}">
+
+                                        <label for="expmonth">Exp Month</label>
+                                        <select id="favorite" placeholder="Select a month">
+                                            <option value="Navigation" selected="selected">Select a Month</option>
+                                            <option value="Navigation">Janary</option>
+                                            <option value="Navigation">February</option>
+                                            <option value="Navigation">March</option>
+                                            <option value="Navigation">April</option>
+                                            <option value="Navigation">May</option>
+                                            <option value="Navigation">June</option>
+                                            <option value="Navigation">July</option>
+                                            <option value="Navigation">August</option>
+                                            <option value="Navigation">September</option>
+                                            <option value="Navigation">October</option>
+                                            <option value="Navigation">November</option>
+                                            <option value="Navigation">December</option>
+                                        </select>    
+                                        <br>    
+                                        <br>                                
+                                        <div class="row">
+                                        <div class="col-50">
+                                            <label for="expyear">Exp Year</label>
+                                            <input type="text" id="expyear" name="expyear" placeholder="2021" maxlength="4" onkeypress="validate(event)">
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="cvv">CVV</label>
+                                            <input type="text" id="cvv" name="cvv" maxlength="3" placeholder="123" onkeypress="validate(event)">
+                                        </div>
+
+                                    </div>
+                                    </div>
+                                    
+                                </div>
+                                    <label>
+                                    <input type="checkbox" value="0" name="surcharge"> I understand that if the appointment is missed, a $20 fee will be charged.
+                                    </label>
+                                </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="booked(Mary)">Book
+                                    </button>
+                                    </div>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="images/vet1.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <p class="card-text">Joseph is a registered veterinarian with 10 years of experience and is certified groomer who loves all animals.</p>
+                <button class="btn btn-primary alert-danger" id="Joseph" type="button" data-bs-toggle="modal" data-bs-target="#bookJoseph" onclick="setUnavailableDates(this.id)">Book Appointment</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="bookJoseph" tabindex="-1" aria-labelledby="bookJoseph" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-x1">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalLabel">Book an appointment with Joseph</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>We are open 7 days a week, Joseph does not work on Wednesdays. <input type="text" id="dateInput3"></h4>
+
+                            <h4>Choose a service</h4>
+                            <input type="radio" name="Service" value="Online"> Neuter<br>
+                            <input type="radio" name="Service" value="In-Person"> Grooming<br>
+                            <input type="radio" name="Service" value="Indifferent"> Training <br>
+                            <input type="radio" name="Service" value="Indifferent"> Microchip <br>
+                            <input type="radio" name="Service" value="Vaccination"> Pet Vaccination<br>
+                            <input type="radio" name="Service" value="Dentistry"> Pet Dentistry<br>
+
+                            <hr>
+
+                            <div class="row">
+                            <div class="col-75">
+                                <div class="container">
+                                <form action="/action_page.php">
+                                
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <h4>Customer Information</h4>
+                                            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                            <input type="text" id="email" name="email" placeholder="john@example.com">
+                                            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                            <label for="city"><i class="fa fa-institution"></i> City</label>
+                                            <input type="text" id="city" name="city" placeholder="New York">
+
+                                            <div class="row">
+                                            <div class="col-50">
+                                                <label for="phone">Phone Number</label>
+                                                <input type="text" id="phone" name="phone" placeholder="(XXX) XXX-XXXX">
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-50">
+                                        <h3>Payment</h3>
+                                        <label for="fname">Accepted Cards</label>
+                                        <div class="icon-container">
+                                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                        </div>
+                                        <label for="cname">Name on Card</label>
+                                        <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                        <label for="ccnum">Credit card number</label>
+                                        <input type="text" id="ccnum" name="cardnumber" maxlength="16" placeholder="XXXXXXXXXXXXXXXX" onkeypress="validate(event)"
+                                        title="Please enter a 16-digit credit card number." pattern=".{16,16}">
+
+                                        <label for="expmonth">Exp Month</label>
+                                        <select id="favorite" placeholder="Select a month">
+                                            <option value="Navigation" selected="selected">Select a Month</option>
+                                            <option value="Navigation">Janary</option>
+                                            <option value="Navigation">February</option>
+                                            <option value="Navigation">March</option>
+                                            <option value="Navigation">April</option>
+                                            <option value="Navigation">May</option>
+                                            <option value="Navigation">June</option>
+                                            <option value="Navigation">July</option>
+                                            <option value="Navigation">August</option>
+                                            <option value="Navigation">September</option>
+                                            <option value="Navigation">October</option>
+                                            <option value="Navigation">November</option>
+                                            <option value="Navigation">December</option>
+                                        </select>    
+                                        <br>    
+                                        <br>                                
+                                        <div class="row">
+                                        <div class="col-50">
+                                            <label for="expyear">Exp Year</label>
+                                            <input type="text" id="expyear" name="expyear" placeholder="2021" maxlength="4" onkeypress="validate(event)">
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="cvv">CVV</label>
+                                            <input type="text" id="cvv" name="cvv" maxlength="3" placeholder="123" onkeypress="validate(event)">
+                                        </div>
+
+                                    </div>
+                                    </div>
+                                    
+                                </div>
+                                    <label>
+                                    <input type="checkbox" value="0" name="surcharge"> I understand that if the appointment is missed, a $20 fee will be charged.
+                                    </label>
+                                </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="booked('Joseph')">Book
+                                    </button>
+                                    </div>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
