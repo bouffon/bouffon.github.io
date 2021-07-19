@@ -1,0 +1,311 @@
+<!-- This file contains a few elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+<!-- as well as JQuery found here: https://www.w3schools.com/jquery/default.asp -->
+
+<!-- Images source: -->
+<!-- The two icons come from this bank of icons: https://icons8.com/icons.  I used the free downloadable ones.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Module 8/9 - Lab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Your own script -->
+    <script src="scripts/service.js"></script>
+    <!-- here we input our javascript helper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<!-- Using the collapsible Navbar, so we see the hamburger menu icon -->
+<!-- It really has become a standard. -->
+<!-- As your page is a vertical page (Module 4 requirement), you mus use the navbar -->
+<!-- to just jump to parts of the page. What I put as First/Second/Third here would -->
+<!-- be sections in your page. -->
+<nav class="navbar navbar-expand-md bg-light text-dark p-3 sticky-top">
+    <h1 class="navbar-brand" href="#name">Welcome to the Grapevine <br>Bienvenue au Grapevine!</h1>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link p-3" href="#about"> <img src="https://img.icons8.com/ios/50/000000/info--v1.pngAbout" alt="logo" style="width:30px;padding:5px">About Us / À Propos De Nous</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-3" href="#services"><img src="https://img.icons8.com/ios/50/000000/helping-hand.png" alt="logo" style="width:30px;padding:5px">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-3" href="#experts"><img src="https://img.icons8.com/fluent-systems-regular/48/000000/ask-question.png" alt="logo" style="width:30px;padding:5px">More Info / Info Supplémentaire</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br>
+
+
+<div class="container p-3 my-3" id="about">
+    <h3> <img src="images/grapevine.jpg" alt="about" style="padding:10px" width="70" height="80">About Us / À Propos De Nous</h3>
+
+
+    <p style="font-size: 25px; padding-left: 1.5rem">We are a new climbing gym located in <strong>Downtown Ottawa.</strong></p>
+    <p style="font-size: 25px; padding-left: 1.5rem">Nous sommes un nouveau gymnase d'escalade situé au<strong> Centre-Ville D'Ottawa.</strong></p>
+
+    <p style="font-size: 25px; padding-left: 1.5rem">Address / Adresse: 75 Laurier Avenue East, Ottawa, ON K1N 6N5</p>
+
+    <a style="font-size: 25px; padding-left: 1.5rem" href=https://www.youtube.com/watch?v=6ybn3GangdM>Learn more about bouldering! / Apprenez-en davantage sur l'escalade de blocs !</a>
+</div>
+
+<!-- Just arbitrary divisions to see the link from the NavBar -->
+<!-- Also, notice the use of the icon repeated from the menu to add grouping -->
+<div class="container p-3 my-3" id="services">
+    <h3><img src="https://img.icons8.com/ios/50/000000/helping-hand.png" alt="logo" style="padding:10px">What We Offer / Voici Nos Installations</h3>
+    <!--
+    Tables are one of many ways to organize information easily.
+    It is a good way to list of prices, or services in a business website
+    https://getbootstrap.com/docs/5.0/content/tables/
+    -->
+    <table class="table table-info table-hover bg-success">
+        <thead>
+            <tr>
+                <th scope="col"><h2>Services</h2></th>
+                <th scope="col"><h2>Description</h2></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Climbing Session/Session d'escalade</td>
+                <td>$10 per / chaque session</td>
+            </tr>
+            <tr>
+                <td>Sustainability/Durabilité</td>
+                <td>We are committed to teaching everyone about sustainability. Our rocks are all made out recycled materials! <br><br> Nous nous engageons à enseigner à tous la durabilité. Nos pierres sont toutes fabriquées à partir de matériaux recyclés !</td>
+            </tr>
+            <tr>
+                <td>Training/Entraînement</td>
+                <td>$50 per / chaque session</td>
+            </tr>
+            <tr>
+                <td>Café</td>
+                <td>We boast having a sustainable café where climbers can relax between sessions. <br><br> Nous sommes fiers d'avoir un café durable où les grimpeurs peuvent se détendre entre les sessions. </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container" id="experts">
+    <h1><img src="https://img.icons8.com/fluent-systems-regular/48/000000/ask-question.png" alt="logo" style="padding:10px">More Info / Info Supplémentaire</h1>
+
+    <div class="d-flex justify-content-evenly">
+
+        <div class="card" style="width: 25rem;">
+            <img src="images/climbing.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <p class="card-text">Book a climbing session! <br>Réservez une séance d'escalade !</p>
+                <button class="btn btn-primary alert-danger" id="Mary" type="button" data-bs-toggle="modal" data-bs-target="#bookMary" onclick="setUnavailableDates(this.id)">Book Appointment</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="bookMary" tabindex="-1" aria-labelledby="bookMary" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalLabel">Booking / Réservation</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Please select a booking day <br> Veuillez choisir un jour de réservation <input type="text" id="dateInput1"></h4> 
+
+                            <br>
+
+
+                            <h4>Select a time / Sélectionnez une heure</h4>
+                            <img src="images/popular.png" alt="logo" style="padding:10px">
+
+                            <select id="favorite" placeholder="Select a month">
+                                <option value="Navigation" selected="selected">Select a time / Sélectionnez une heure</option>
+                                <option value="Navigation">10am</option>
+                                <option value="Navigation">11am</option>
+                                <option value="Navigation">12pm</option>
+                                <option value="Navigation">1pm</option>
+                                <option value="Navigation">2pm</option>
+                                <option value="Navigation">3pm</option>
+                                <option value="Navigation">4pm</option>
+                                <option value="Navigation">5pm</option>
+                                <option value="Navigation">6pm</option>
+                                <option value="Navigation">7pm</option>
+                                <option value="Navigation">8pm</option>
+                                <option value="Navigation">9pm</option>
+                                <option value="Navigation">10pm</option>
+                            </select> 
+
+
+                            <br> 
+                            <br>                         
+
+                            <div class="row">
+                            <div class="col-75">
+                                <div class="container">
+                                <form action="/action_page.php">
+                                
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <h4>Customer Information</h4>
+                                            <label for="fname"><i class="fa fa-user"></i> Name / Nom</label>
+                                            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                            <label for="email"><i class="fa fa-envelope"></i> Email / Courriel</label>
+                                            <input type="text" id="email" name="email" placeholder="john@example.com">
+ 
+                                            <div class="row">
+                                            <div class="col-50">
+                                                <label for="phone">Telephone / Téléphone</label>
+                                                <input type="text" id="phone" name="phone" placeholder="(XXX) XXX-XXXX">
+                                            </div>
+
+                                            </div>
+                                            <label>
+                                            <input type="checkbox" value="0" name="surcharge"> I understand that if the appointment is missed, a $20 fee will be charged. <br> Je comprends que si le rendez-vous est manqué, des frais de 20 $ seront facturés.
+                                            </label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <br>
+
+                                    <div class="col-50">
+                                        <h3>Payment / Paiement</h3>
+                                        <label for="fname">Accepted Cards / Cartes Acceptées </label>
+                                        <div class="icon-container">
+                                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                        </div>
+                                        <label for="cname">Cardholder / Titulaire</label>
+                                        <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                        <label for="ccnum">Credit card number / Numéro de carte de crédit </label>
+                                        <input type="text" id="ccnum" name="cardnumber" maxlength="16" placeholder="XXXXXXXXXXXXXXXX" onkeypress="validate(event)"
+                                        title="Please enter a 16-digit credit card number." pattern=".{16,16}">
+
+                                        <label for="expmonth">Exp Month</label>
+                                        <select id="favorite" placeholder="Select a month">
+                                            <option value="Navigation" selected="selected">Select a Month / Sélectionnez un mois </option>
+                                            <option value="Navigation">January / Janvier</option>
+                                            <option value="Navigation">February / Février</option>
+                                            <option value="Navigation">March / Mars</option>
+                                            <option value="Navigation">April / Avril</option>
+                                            <option value="Navigation">May / Mai</option>
+                                            <option value="Navigation">June / Juin</option>
+                                            <option value="Navigation">July / Juillet</option>
+                                            <option value="Navigation">August / Août</option>
+                                            <option value="Navigation">September / Septembre</option>
+                                            <option value="Navigation">October / Octobre</option>
+                                            <option value="Navigation">November / Novembre</option>
+                                            <option value="Navigation">December / Décembre</option>
+                                        </select>    
+                                        <br>    
+                                        <br>                                
+                                        <div class="row">
+                                        <div class="col-50">
+                                            <label for="expyear">Exp Year / Date d'Expiration </label>
+                                            <input type="text" id="expyear" name="expyear" placeholder="2021" maxlength="4" onkeypress="validate(event)">
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="cvv">CVV</label>
+                                            <input type="text" id="cvv" name="cvv" maxlength="3" placeholder="123" onkeypress="validate(event)">
+                                        </div>
+
+                                    </div>
+                                    </div>
+                                    
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="booked('Mary')">Confirm Booking / Confirmez la Réservation
+                                    </button>
+                                    </div>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 25rem;">
+            <img src="images/cafe.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <p class="card-text">Learn more about our sustainable cafe! <br> En savoir plus sur notre café durable ! </p>
+                <button class="btn btn-primary alert-danger" id="Jessica" type="button" data-bs-toggle="modal" data-bs-target="#bookJessica" onclick="setUnavailableDates(this.id)">Learn more / En savoir plus </button>
+
+                <!--Modal-->
+                <div class="modal fade" id="bookJessica" tabindex="-1" aria-labelledby="bookJessica" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-x1">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalLabel">Menu</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <img src="images/menu.jpg" class="card-img-top" alt="...">
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card" style="width: 25rem;">
+            <img src="images/sustainable.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <p class="card-text">Sustainable at Heart.<br> La durabilité au cœur de la démarche</p>
+                <button class="btn btn-primary alert-danger" id="Joseph" type="button" data-bs-toggle="modal" data-bs-target="#bookJoseph" onclick="setUnavailableDates(this.id)">Book Appointment</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="bookJoseph" tabindex="-1" aria-labelledby="bookJoseph" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-x1">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalLabel">Sustainabilty / La Durabilité</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>We started with a mission: <strong>sustainble climbing to be a hub for the community.</strong><br><br> Nous avons commencé avec une mission : <strong>l'escalade durable pour être un centre pour la communauté. </strong></h4><br>
+
+                            <img src="images/grapevine.jpg" alt="about" style="padding:10px" width="150" height="160">
+
+
+                            <h4>The grapevine symbolizes sustainble mountain we ought to climb as a community!<br><br> La vigne symbolise la montagne durable que nous devons gravir en tant que communauté ! </h4><br>
+                            
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
